@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(to right, #f8e1f4, #e6f0ff);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f67280;
+  border-bottom: 2px solid #f67280;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+ul li::before {
+  content: "✔"; /* チェックマーク */
+  position: absolute;
+  left: 0;
+  color: #f67280;
+  font-weight: bold;
+}
+
+.work-item {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #333;
+}
+
+footer {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #333;
+    padding: 10px;
+  }
+  nav.active ul {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
